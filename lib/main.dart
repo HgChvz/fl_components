@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/screens.dart';
-
-
+import 'package:fl_components/router/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,22 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute: 'home',
-      routes: {
-        'home'     : (BuildContext context) => const HomeScreen(),
-        'listview1': (BuildContext context ) => const Listview1Screen(),
-        'listview2': (BuildContext context) => const Listview2Screen(),
-        'alert'    : (BuildContext context ) => const AlertScreen(),
-        'card'     : (BuildContext context) => const CardScreen(),
-      },
-
-      onGenerateRoute: (settings) {
-        // print(settings);
-        return MaterialPageRoute(
-               builder: (context) => const AlertScreen(),
-        );
-      },
-
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
+      onGenerateRoute: AppRoutes.onGenerateRoute
+      //onGenerateRoute: (settings) => AppRoutes.onGenerateRoute(settings) // Si se tienen los mismos argumento tanto lo que recibimos como de lo que mandamos lo podemos obviar como la linea de arriba
     );
   }
 }

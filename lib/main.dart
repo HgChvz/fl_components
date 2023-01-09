@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/themes/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,18 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
-      theme: ThemeData.light().copyWith(
-        //Color primario
-        primaryColor: Colors.indigo,
-
-        //AppBar Theme
-        appBarTheme: const AppBarTheme(
-          color: Colors.indigo,
-          centerTitle: true,
-          elevation: 5.0,
-        )
-
-      )
+      theme: AppTheme.lightTheme,
       //onGenerateRoute: (settings) => AppRoutes.onGenerateRoute(settings) // Si se tienen los mismos argumento tanto lo que recibimos como de lo que mandamos lo podemos obviar como la linea de arriba
     );
   }

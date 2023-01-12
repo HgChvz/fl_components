@@ -18,6 +18,12 @@ class CardScreen extends StatelessWidget {
           CustomCardType1(),
           SizedBox(height: 10.0,),
           CustomCardType2(),
+          SizedBox(height: 10.0,),
+          CustomCardType2(),
+          SizedBox(height: 10.0,),
+          CustomCardType2(),
+          SizedBox(height: 100.0,),
+
         ],
       ),
     );

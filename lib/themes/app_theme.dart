@@ -15,7 +15,12 @@ class AppTheme{
           color: primary,
           centerTitle: true,
           elevation: 5.0,
-        )
+        ),
+
+        //TextButton Theme
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(foregroundColor: primary),
+        ),
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
